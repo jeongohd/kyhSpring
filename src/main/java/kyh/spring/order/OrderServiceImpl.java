@@ -41,4 +41,9 @@ public class OrderServiceImpl implements OrderService {
         // 문제 해결을 위해, OrderServiceImpl에 DiscountPolicy의 구현 객체를 대신 생성하고 주입해주어야 함.
         return new Order(memberId, itemName, itemPrice, discountPrice);
     }
+
+    //테스트 용도
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
 }
