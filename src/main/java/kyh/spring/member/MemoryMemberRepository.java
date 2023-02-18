@@ -1,10 +1,13 @@
 package kyh.spring.member;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
 
 // DB역할
+@Component
 public class MemoryMemberRepository implements MemberRepository {
 
     // 설계시 데이터베이스가 아직 정해지지 않아서 이렇게라도 개발.

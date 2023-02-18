@@ -6,7 +6,10 @@ import kyh.spring.discount.RateDiscountPolicy;
 import kyh.spring.member.Member;
 import kyh.spring.member.MemberRepository;
 import kyh.spring.member.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
 
@@ -28,6 +31,7 @@ public class OrderServiceImpl implements OrderService {
      OrderServiceImpl의 생성자를 통해 어떤 구현 객체를 주입할 지는 오직 외부(AppConfig)에서 결정.
      OrderServiceImpl은 실행에만 집중함.
      */
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
